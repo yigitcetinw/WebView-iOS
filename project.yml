@@ -10,3 +10,4 @@ targets:
     settings:
       GENERATE_INFOPLIST_FILE: YES
       PRODUCT_NAME: "YouTube"  # Telefonda uygulamanın simgesinin altında yazacak isim
+      INFOPLIST_KEY_UILaunchScreen_Generation: YES
