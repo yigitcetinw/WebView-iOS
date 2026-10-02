@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct HaxbeyWebViewApp: App {
+struct WebViewApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
