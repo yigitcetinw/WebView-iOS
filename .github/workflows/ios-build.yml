@@ -36,11 +36,11 @@ jobs:
       - name: IPA Dosyasını Paketle
         run: |
           mkdir -p Payload
-          mv build/Release-iphoneos/WebView.app Payload/
-          zip -r WebView-App.ipa Payload
+          mv build/Release-iphoneos/YouTube.app Payload/
+          zip -r YouTube-App.ipa Payload
           
       - name: IPA'yı İndirme Linki Olarak Yükle
         uses: actions/upload-artifact@v4
         with:
-          name: WebView-iOS
-          path: WebView-App.ipa
+          name: YouTube
+          path: YouTube-App.ipa
