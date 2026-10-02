@@ -7,3 +7,5 @@ targets:
     platform: iOS
     deploymentTarget: "15.0"
     sources: [WebView]
+    settings:
+      GENERATE_INFOPLIST_FILE: YES
