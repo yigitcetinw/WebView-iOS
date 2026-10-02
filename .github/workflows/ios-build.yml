@@ -21,11 +21,26 @@ jobs:
       - name: xcodeproj Dosyasını Otomatik Üret
         run: xcodegen generate
           
-      - name: Projeyi Derle (Sertifikasız)
+      - name: Projeyi Derle (İmzasız Gerçek Cihaz Çıktısı)
         run: |
           xcodebuild clean build \
             -project WebView.xcodeproj \
             -scheme WebView \
-            -destination 'generic/platform=iOS' \
+            -configuration Release \
+            -sdk iphoneos \
+            SYMROOT=$(PWD)/build \
             CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+            
+      - name: IPA Dosyasını Paketle
+        run: |
+          mkdir -p Payload
+          mv build/Release-iphoneos/WebView.app Payload/
+          zip -r WebView-App.ipa Payload
+          
+      - name: IPA'yı İndirme Linki Olarak Yükle
+        uses: actions/upload-artifact@v4
+        with:
+          name: WebView-iOS
+          path: WebView-App.ipa
