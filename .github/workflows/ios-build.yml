@@ -18,8 +18,8 @@ jobs:
       - name: Projeyi Derle (Sertifikasız)
         run: |
           xcodebuild clean build \
-            -project HaxbeyWebView.xcodeproj \
-            -scheme HaxbeyWebView \
+            -project WebView.xcodeproj \
+            -scheme WebView \
             -destination 'generic/platform=iOS' \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO
