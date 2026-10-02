@@ -1,0 +1,9 @@
+name: WebView
+options:
+  bundleIdPrefix: com.haxbey
+targets:
+  WebView:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources: [WebView]
