@@ -1,6 +1,6 @@
 name: WebView
 options:
-  bundleIdPrefix: com.haxbey
+  bundleIdPrefix: com.youtube.webview
 targets:
   WebView:
     type: application
@@ -9,3 +9,4 @@ targets:
     sources: [WebView]
     settings:
       GENERATE_INFOPLIST_FILE: YES
+      PRODUCT_NAME: "YouTube"  # Telefonda uygulamanın simgesinin altında yazacak isim
